@@ -20,7 +20,9 @@ WARNING! ⚠ Google will ask you to enable "unsafe login" in order for the gmail
 Launch your Apache server and...that's it! You're up and running :)
 Just type "azerty" as username and "12345" as your password, and enjoy the ride :D
 
+#Errors
 
+Send Emails doesn't work, as well as jspdf.js
 
 
 
