@@ -12,6 +12,19 @@ if(isset($_POST['but_logout'])){
     session_destroy();
     header('Location: ..\\index.php');
 }
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "tutorial";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
 ?>
 
 
@@ -67,6 +80,29 @@ if(isset($_POST['but_logout'])){
 
 
         <div class="wrapper-grid">
+
+        <?php
+                $sql = "SELECT id, image, name, quote FROM quotes";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        echo '<div class="containerrrrrrr">
+                                <div class="card'. $row['id'].'">
+                                    <img src="'. $row['image']. '">
+                                    <div class="info'.$row['id'].'">
+                                        <h1>'.$row["name"].'<h1>
+                                        <p>'.$row["quote"].'</p>
+                                    </div>
+                                </div>
+                            </div>';
+                    }
+                } else {
+                    echo "0 results";
+                }
+                $conn->close();
+            ?>
             <div class="containerrrrrr">
                 <div class="card14">
                     <img src="../Images/Quotes/Assassin.jpg">
