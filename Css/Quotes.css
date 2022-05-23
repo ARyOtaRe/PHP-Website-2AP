@@ -1,0 +1,1488 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+  --pink:rgb(255, 130, 130);
+  --green:rgb(105, 248, 124);
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+
+/* ===== Nav Links ===== */
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family: 'Papyrus';
+    font-size: 18px;
+    justify-content: flex-end;
+
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+
+}
+.nav-item{
+    list-style: none;
+    margin-right: 2em ;
+  
+  }
+.nav-links li{
+    margin: 0 30px;
+}
+.nav-item:first-child{
+  margin-right: 11.5rem;
+  margin-left: 1.0rem;
+  
+}
+.nav-item:first-child:hover{
+  --pink:rgb(105, 248, 124);
+  --green:rgb(255, 130, 130);
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    animation: slide 16s ease-in-out infinite;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+@keyframes slide {
+  0%,100%{
+      background-image: url(../Xmas/1.jpg);
+
+  }
+
+  20%{
+      background-image: url(../Xmas/3.jpg);
+
+  }
+
+  40%{
+      background-image: url(../Xmas/9.jpg);
+
+  }
+
+  60%{
+      background-image: url(../Xmas/8.jpg);
+
+  }
+
+  80%{
+      background-image: url(../Xmas/6.jpg);
+
+  }
+}
+
+#logo1{
+    color: rgb(255, 130, 130);
+    font-size: 60px;
+    font-family: 'Gabriola';
+}
+
+span1{
+  color: var(--pink);
+  font-size: 60px;
+  font-family: 'Gabriola';
+}
+
+span2{
+  color: var(--green);
+  font-size: 60px;
+  font-family: 'Gabriola';
+}
+
+.header-content{
+    margin-bottom: 150px;
+    color: snow;
+    text-align: center;
+}
+
+.header-content h2 {
+    font-size: 5vmin;
+    font-family: 'Century Gothic';
+}
+
+.line{
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(120deg,rgb(255, 130, 130),rgb(105, 248, 124));
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.header-content h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family: 'Century Gothic';
+}
+
+button{
+    width: 180px;
+    color: snow;
+    font-size: 15px;
+    padding: 12px 0;
+    background: rgb(255, 130, 130);
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* *********** Events *************** */
+
+section{
+    width: 100%;
+    margin: 80px auto;
+}
+
+.title{
+    text-align: center;
+    font-size: 4vmin;
+    color: rgb(73,73,126);
+    font-family: 'Century Gothic';
+}
+
+/* *********** Quote Cards *************** */
+
+.wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 24rem);
+    justify-content: center;
+  }
+  
+  
+  .containerrrrrrr {
+    overflow: hidden;
+    box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+    text-align: center;
+    border-radius: 1rem;
+    position: relative;
+  }
+  /* ********** Color Changer : Card 1 **************** */
+  
+  .card1{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card1:hover{
+    transform: translateY(20px);
+  }
+  
+  .card1:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(172, 166, 152,0.4),rgba(241, 241, 239,1));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  
+  }
+  
+  .card1:hover:before{
+    opacity: 1;
+  }
+  
+  .card1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card1 .info1{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card1:hover .info1{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card1 .info1 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(19, 19, 20);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card1 .info1 p{
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-top: 8px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(89, 94, 104);
+  }
+  
+  /* ********** Color Changer : Card 2 **************** */
+  
+  .card2{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card2:hover{
+    transform: translateY(20px);
+  }
+  
+  .card2:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(189, 186, 143,0.4),rgba(190, 195, 193,1));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card2:hover:before{
+    opacity: 1;
+  }
+  
+  .card2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card2 .info2{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card2:hover .info2{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card2 .info2 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(39, 44, 44);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card2 .info2 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(82, 88, 91);
+  }
+  
+  /* ********** Color Changer : Card 3 **************** */
+  
+  .card3{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card3:hover{
+    transform: translateY(20px);
+  }
+  
+  .card3:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(200, 244, 233,0.4),rgb(124, 138, 88));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card3:hover:before{
+    opacity: 1;
+  }
+  
+  .card3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card3 .info3{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card3:hover .info3{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card3 .info3 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(113, 251, 249);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card3 .info3 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(231, 255, 255);
+  }
+  
+  /* ********** Color Changer : Card 4 **************** */
+  
+  .card4{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card4:hover{
+    transform: translateY(20px);
+  }
+  
+  .card4:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(75, 174, 192,0.4),rgb(22, 19, 25));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card4:hover:before{
+    opacity: 1;
+  }
+  
+  .card4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card4 .info4{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card4:hover .info4{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card4 .info4 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(138, 155, 181);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card4 .info4 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(218, 145, 234);
+  }
+  
+  /* ********** Color Changer : Card 5 **************** */
+  
+  .card5{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card5:hover{
+    transform: translateY(20px);
+  }
+  
+  .card5:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(69, 133, 179,0.4),rgb(97, 95, 155));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card5:hover:before{
+    opacity: 1;
+  }
+  
+  .card5 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card5 .info5{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card5:hover .info5{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card5 .info5 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(41, 19, 81);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card5 .info5 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(221, 242, 233);
+  }
+  
+  /* ********** Color Changer : Card 6 **************** */
+  
+  .card6{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card6:hover{
+    transform: translateY(20px);
+  }
+  
+  .card6:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(6, 21, 23,0.4),rgb(251, 239, 31));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card6:hover:before{
+    opacity: 1;
+  }
+  
+  .card6 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card6 .info6{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card6:hover .info6{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card6 .info6 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(44, 36, 31);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card6 .info6 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(253, 255, 171);
+  }
+  
+  /* ********** Color Changer : Card 7 **************** */
+  
+  .card7{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card7:hover{
+    transform: translateY(20px);
+  }
+  
+  .card7:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(225, 221, 219,0.4),rgb(51, 48, 43));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card7:hover:before{
+    opacity: 1;
+  }
+  
+  .card7 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card7 .info7{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card7:hover .info7{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card7 .info7 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(27, 23, 23);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card7 .info7 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(227, 226, 222);
+  }
+  
+  /* ********** Color Changer : Card 7 **************** */
+  
+  .card8{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card8:hover{
+    transform: translateY(20px);
+  }
+  
+  .card8:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(60, 81, 46,0.4),rgb(72, 45, 30));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card8:hover:before{
+    opacity: 1;
+  }
+  
+  .card8 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card8 .info8{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card8:hover .info8{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card8 .info8 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(10, 8, 7);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card8 .info8 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(131, 168, 105);
+  }
+  
+  /* ********** Color Changer : Card 7 **************** */
+  
+  .card9{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card9:hover{
+    transform: translateY(20px);
+  }
+  
+  .card9:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(123, 124, 118,0.4),rgb(0, 0, 0));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card9:hover:before{
+    opacity: 1;
+  }
+  
+  .card9 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card9 .info9{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card9:hover .info9{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card9 .info9 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(104, 111, 111);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card9 .info9 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(165, 171, 165);
+  }
+  
+  /* ********** Color Changer : Card 7 **************** */
+  
+  .card10{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card10:hover{
+    transform: translateY(20px);
+  }
+  
+  .card10:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(6, 21, 23,0.4),rgb(251, 239, 31));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card10:hover:before{
+    opacity: 1;
+  }
+  
+  .card10 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card10 .info10{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card10:hover .info10{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card10 .info10 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(44, 36, 31);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card10 .info10 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(253, 255, 171);
+  }
+  
+  /* ********** Color Changer : Card 7 **************** */
+  
+  .card11{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card11:hover{
+    transform: translateY(20px);
+  }
+  
+  .card11:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(107, 116, 123,0.4),rgb(244, 119, 99));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card11:hover:before{
+    opacity: 1;
+  }
+  
+  .card11 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card11 .info11{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card11:hover .info11{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card11 .info11 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(78, 59, 47);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card11 .info11 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(36, 27, 17);
+  }
+  
+  /* ********** Color Changer : Card 12 **************** */
+  
+  .card12{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card12:hover{
+    transform: translateY(20px);
+  }
+  
+  .card12:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(164, 159, 141,0.4),rgb(25, 25, 23));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card12:hover:before{
+    opacity: 1;
+  }
+  
+  .card12 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card12 .info12{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card12:hover .info12{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card12 .info12 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(13, 13, 13);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card12 .info12 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(219, 198, 181);
+  }
+  
+  /* ********** Color Changer : Card 12 **************** */
+  
+  .card13{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card13:hover{
+    transform: translateY(20px);
+  }
+  
+  .card13:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(22, 82, 90,0.4),rgb(110, 122, 71));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card13:hover:before{
+    opacity: 1;
+  }
+  
+  .card13 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card13 .info13{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card13:hover .info13{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card13 .info13 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card13 .info13 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(183, 204, 204);
+  }
+  
+  /* ********** Color Changer : Card 12 **************** */
+  
+  .card14{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card14:hover{
+    transform: translateY(20px);
+  }
+  
+  .card14:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(255, 250, 250,0.4),rgb(210, 41, 31));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card14:hover:before{
+    opacity: 1;
+  }
+  
+  .card14 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card14 .info14{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card14:hover .info14{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card14 .info14 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(29, 13, 10);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card14 .info14 p{
+    letter-spacing: 1px;
+    font-size: 25px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+  
+  /* ********** Color Changer : Card 12 **************** */
+  
+  .card15{
+    width: fit-content;
+    height: 360px;
+    padding: 2rem 1rem;
+    background: snow;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+    margin: 20px;
+    border-radius: 1rem;
+  }
+  
+  .card15:hover{
+    transform: translateY(20px);
+  }
+  
+  .card15:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(105, 129, 149,0.4),rgb(50, 51, 52));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+    border-radius: 1rem;
+  }
+  
+  .card15:hover:before{
+    opacity: 1;
+  }
+  
+  .card15 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+  }
+  
+  .card15 .info15{
+    position: relative;
+    z-index: 3;
+    color: snow;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+  }
+  
+  .card15:hover .info15{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  
+  .card15 .info15 h1{
+    margin: 0;
+    font-family: "Papyrus";
+    color: rgb(8, 10, 11);
+    font-size: 35px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .card15 .info15 p{
+    letter-spacing: 1px;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    color: rgb(137, 168, 191);
+  }
+/* *********** Animations *************** */
+
+a:link{
+    color: snow;
+    text-decoration: none;
+}
+
+a:visited{
+    color: snow;
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(255, 130, 130);
+    text-decoration: none;
+}
+
+a:active{
+    color: snow;
+    text-decoration: none;
+}
+
+button:hover{
+    color: snow;
+    background-color: rgb(105, 248, 124);
+}
+
+/* Footer */
+
+.footer{
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 80px;
+    margin: 0;
+    background: linear-gradient(120deg,rgb(255, 130, 130),rgb(105, 248, 124));
+    text-align: center;
+}
+
+.footer p{
+    color: snow;
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#myBtn {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgb(36, 24, 24);
+    color: white;
+    cursor: pointer;
+    padding: 4px;
+    padding-bottom: 2px;
+    border-radius: 50%;
+    width: 39px;
+  }
+  
+#myBtn:hover {
+    background-color: #555;
+    cursor: pointer;
+  }

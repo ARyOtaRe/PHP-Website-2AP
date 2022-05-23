@@ -80,6 +80,7 @@ if ($conn->connect_error) {
 
 
         <div class="wrapper-grid">
+
         <?php
                 $sql = "SELECT id, image, name, quote FROM quotes";
                 $result = $conn->query($sql);
