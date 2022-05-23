@@ -1,3 +1,6 @@
+CREATE DATABASE `tutorial`;
+
+USE`tutorial`;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
