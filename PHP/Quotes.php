@@ -1,5 +1,5 @@
 <?php
-include "..\\config.php";
+include "Config.php";
 
 
 // Check user login or not
@@ -65,7 +65,7 @@ if ($conn->connect_error) {
             <h2>Explore Some Interesting Quotes by Video Games' Characters</h2>
             <div class="line"></div>
             <h1>Gamer Times</h1>
-            <a href="Quotes.php"><button>Explore</button></a>
+            <a href="#Quotes_section"><button>Explore</button></a>
         </div>
     </header>
 
@@ -73,7 +73,7 @@ if ($conn->connect_error) {
 
     <section class="events">
 
-        <div class="title">
+        <div class="title" id="Quotes_section">
             <h1>Quotes</h1>
             <div class="line"></div>
         </div>
