@@ -1,5 +1,5 @@
 <?php
-include "..\\config.php";
+include "Config.php";
 
 
 // Check user login or not
