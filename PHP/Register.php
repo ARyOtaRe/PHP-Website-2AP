@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include "Config.php";
 
 // Check user login or not
 if(!isset($_SESSION['uname'])){
@@ -22,8 +22,8 @@ if(!isset($_SESSION['uname'])){
                 <div>Type your name: <input id="input_add_user" type="text" name="txt_name" placeholder="Name"/></br></div>
                 <div>Type your password: <input id="input_add_user" type="text" name="txt_pwd" placeholder="Password"/></br></div>
                 <input type="submit" name="valider" value="OK"/></br>
-                <a href="home.php">
-                <input value="Back"/>
+                <a href="Home.php">
+                    <input type="button" value="Back"/>
                 </a>
             </form>
             <?php
