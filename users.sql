@@ -12,7 +12,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `name`, `password`) VALUES
 (1, "azerty", "John Doe", "12345"),
-(2, "jeandosantos", "Jean Dos Santos", "12345");
+(2, "admin", "admin", "admin");
+(3, "jeandosantos", "Jean Dos Santos", "12345");
 
 
   CREATE TABLE `quotes`(
