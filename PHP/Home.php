@@ -41,6 +41,11 @@ if(isset($_POST['but_logout'])){
             <li class="nav-item"><a href="Fun Facts.php">Fun Facts</a></li>
             <li class="nav-item"><a href="Quotes.php">Quotes</a></li>
             <li class="nav-item"><a href="Contact_us.php">Contact us</a></li>
+            <?php
+        if($_SESSION['uname'] == "admin"||$_SESSION['uname'] == "jeandosantos"){
+            echo '<li class="nav-item"><a href="Admin.php">Admin page</a></li>';
+        }
+        ?>
         </ul>
 
     </nav>
