@@ -31,12 +31,17 @@ if(isset($_POST['but_logout'])){
     <nav class="navbar">
         <ul class="nav-links">
             <li style="font-size: 50px;" class="nav-item"><a href="Home.html"><i class="fas fa-gamepad"></i> <span1>Gamer </span1><span2>Times</span2></a></li>
-            <li class="nav-item"><a href="Home.html">Home</a></li>
-            <li class="nav-item"><a href="NewsMain.html">News</a></li>
-            <li class="nav-item"><a href="History.html">History</a></li>
-            <li class="nav-item"><a href="Fun Facts.html">Fun Facts</a></li>
-            <li class="nav-item"><a href="Quotes.html">Quotes</a></li>
-            <li class="nav-item"><a href="Contact_us.html">Contact us</a></li>
+            <li class="nav-item"><a href="Home.php">Home</a></li>
+            <li class="nav-item"><a href="NewsMain.php">News</a></li>
+            <li class="nav-item"><a href="History.php">History</a></li>
+            <li class="nav-item"><a href="Fun Facts.php">Fun Facts</a></li>
+            <li class="nav-item"><a href="Quotes.php">Quotes</a></li>
+            <li class="nav-item"><a href="Contact_us.php">Contact us</a></li>
+            <?php
+        if($_SESSION['uname'] == "admin"||$_SESSION['uname'] == "jeandosantos"){
+            echo '<li class="nav-item"><a href="Admin.php">Admin page</a></li>';
+        }
+        ?>
         </ul>
     </nav>
     <div class="container">
@@ -51,26 +56,26 @@ if(isset($_POST['but_logout'])){
 
             <div class="col">
 
-                <a href="NewsMain.html">
+                <a href="NewsMain.php">
                     <div class="card card1">
                         <h5>News</h5>
                     </div>
                 </a>
 
-                <a href="History.html">
+                <a href="History.php">
                     <div class="card card2">
                         <h5>History</h5>
                     </div>
                 </a>
 
-                <a href="Fun Facts.html">
+                <a href="Fun Facts.php">
                     <div class="card card3">
                         <h5>Fun Facts</h5>
                     </div>
                 </a>
 
 
-                <a href="Quotes.html">
+                <a href="Quotes.php">
                     <div class="card card4">
                         <h5>Quotes</h5>
                     </div>
@@ -82,6 +87,16 @@ if(isset($_POST['but_logout'])){
 
     </div>
 
+<!-- =========== Footer =========== --> 
+
+    <section class="footer">
+        <p>Gamer Times</p>
+        <p>© 2022 Gamer Times | Copyright | All right reserved.</p>
+        <form method='post' action="">
+            <button name="but_logout">Logout</button>
+            <a href="Register.php"><button>Register</button></a>
+        </form>
+    </section>
 
 </body>
 </html>
