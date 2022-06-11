@@ -53,6 +53,11 @@ if ($conn->connect_error) {
         <li class="nav-item"><a href="Fun Facts.php">Fun Facts</a></li>
         <li class="nav-item"><a href="Quotes.php">Quotes</a></li>
         <li class="nav-item"><a href="Contact_us.php">Contact us</a></li>
+        <?php
+        if($_SESSION['uname'] == "admin"||$_SESSION['uname'] == "jeandosantos"){
+            echo '<li class="nav-item"><a href="Admin.php">Admin page</a></li>';   
+        }
+        ?>
     </ul>
 
 </nav>
@@ -180,7 +185,7 @@ if ($conn->connect_error) {
                     <img src="../Images/Quotes/Frank.jpg">
                     <div class="info15">
                         <h1> Frank Coleridge - Silent Hill : Downpour</h1>
-                        <p>"You can’t undo what you’ve already done, but you can face up to it."</p>
+                        <p>"You can't undo what you've already done, but you can face up to it."</p>
                     </div>
                 </div>
             </div>
@@ -197,13 +202,14 @@ if ($conn->connect_error) {
         </div>
     </section>
 
-    <!-- =========== Footer =========== -->    
+<!-- =========== Footer =========== --> 
 
-    <section class="footer">
+<section class="footer">
         <p>Gamer Times</p>
         <p>© 2022 Gamer Times | Copyright | All right reserved.</p>
         <form method='post' action="">
-        <input type="submit" value="Logout" name="but_logout">
+            <button name="but_logout">Logout</button>
+            <a href="Register.php"><button>Register</button></a>
         </form>
     </section>
 </body>
