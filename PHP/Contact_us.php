@@ -58,9 +58,9 @@ if(isset($_POST['but_logout'])){
         <div class="header-content">
             <h2 id="h2">Contact us</h2>
             <div class="line"></div>
-            <h1>Gamer Times</h1>
+            <h1>Give us some feedback!</h1>
             <a href="Feedback.php">
-                <button>Feedback</button>
+                <button>My feedback</button>
             <a>
             
         </div>
