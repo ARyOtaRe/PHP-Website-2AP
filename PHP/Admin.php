@@ -61,6 +61,22 @@ if ($conn->connect_error) {
 </nav>
 <button  onclick="topFunction()" id="myBtn" title="Go to the top"><img src="../Images/top1.png" width="30" height="30" /></button>
 
+    <!-- =========== Background =========== -->
+
+    <header>
+        <div class="header-content">
+            <h2 id="h2">Admin page</h2>
+            <div class="line"></div>
+            <h1>Edit quotes</h1>
+
+            <button>Add Quote</button>
+            <button> Edit quote </button>
+            <button> Delete quote </button>
+            
+        </div>
+
+    </header>
+
 <!-- =========== Footer =========== --> 
 
 <section class="footer">
