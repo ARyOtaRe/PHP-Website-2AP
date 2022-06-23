@@ -1,5 +1,5 @@
 <?php
-include "..\\config.php";
+include "Config.php";
 
 
 // Check user login or not
@@ -42,6 +42,11 @@ if(isset($_POST['but_logout'])){
             <li class="nav-item"><a href="Fun Facts.php">Fun Facts</a></li>
             <li class="nav-item"><a href="Quotes.php">Quotes</a></li>
             <li class="nav-item"><a href="Contact_us.php">Contact us</a></li>
+            <?php
+        if($_SESSION['uname'] == "admin"||$_SESSION['uname'] == "jeandosantos"){
+            echo '<li class="nav-item"><a href="Admin.php">Admin page</a></li>';
+        }
+        ?>
         </ul>
 
     </nav>
@@ -53,22 +58,23 @@ if(isset($_POST['but_logout'])){
         <div class="header-content">
             <h2 id="h2">Contact us</h2>
             <div class="line"></div>
-            <h1>Gamer Times</h1>
+            <h1>Give us some feedback!</h1>
             <a href="Feedback.php">
-                <button>Feedback</button>
+                <button>My feedback</button>
             <a>
             
         </div>
 
     </header>
 
-    <!-- =========== Footer =========== -->
+<!-- =========== Footer =========== --> 
 
-    <section class="footer">
+<section class="footer">
         <p>Gamer Times</p>
         <p>© 2022 Gamer Times | Copyright | All right reserved.</p>
         <form method='post' action="">
-        <input type="submit" value="Logout" name="but_logout">
+            <button name="but_logout">Logout</button>
+            <a href="Register.php"><button>Register</button></a>
         </form>
     </section>
 

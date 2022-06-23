@@ -27,8 +27,6 @@ if ($conn->connect_error) {
 
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +35,7 @@ if ($conn->connect_error) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamer Times | Quotes</title>
     <link rel="stylesheet" href="../Css/Quotes.css">
-    <link rel="icon" href="../Images/Favicon/Quotes.ico" type="image/x-icon">
+    <link rel="icon" href="../Images/Favicon/Admin.ico" type="image/x-icon">
     <script src='../Javascript/script.js'></script>
 </head>
 <body onload="fromthetop()">
@@ -55,7 +53,7 @@ if ($conn->connect_error) {
         <li class="nav-item"><a href="Contact_us.php">Contact us</a></li>
         <?php
         if($_SESSION['uname'] == "admin"||$_SESSION['uname'] == "jeandosantos"){
-            echo '<li class="nav-item"><a href="Admin.php">Admin page</a></li>';   
+            echo '<li class="nav-item"><a href="Admin.php">Admin page</a></li>';
         }
         ?>
     </ul>
@@ -63,55 +61,21 @@ if ($conn->connect_error) {
 </nav>
 <button  onclick="topFunction()" id="myBtn" title="Go to the top"><img src="../Images/top1.png" width="30" height="30" /></button>
 
-<!-- =========== Header =========== -->
+    <!-- =========== Background =========== -->
 
     <header>
         <div class="header-content">
-            <h2>Explore Some Interesting Quotes by Video Games' Characters</h2>
+            <h2 id="h2">Admin page</h2>
             <div class="line"></div>
-            <h1>Gamer Times</h1>
-            <a href="#Quotes_section"><button>Explore</button></a>
-        </div>
-    </header>
+            <h1>Edit quotes</h1>
 
-<!-- =========== Topic Section 1 =========== -->
-
-    <section class="events">
-
-        <div class="title" id="Quotes_section">
-            <h1>Quotes</h1>
-            <div class="line"></div>
-        </div>
-
-
-        <div class="wrapper-grid">
-
-            <?php
-                $sql = "SELECT id, image, name, quote FROM quotes";
-                $result = $conn->query($sql);
-
-                if ($result->num_rows > 0) {
-                    // output data of each row
-                    while($row = $result->fetch_assoc()) {
-                        echo '<div class="containerrrrrrr">
-                                <div class="card'. $row['id'].'">
-                                    <img src="'. $row['image']. '">
-                                    <div class="info'.$row['id'].'">
-                                        <h1>'.$row["name"].'<h1>
-                                        <p>'.$row["quote"].'</p>
-                                    </div>
-                                </div>
-                            </div>';
-                    }
-                } else {
-                    echo "0 results";
-                }
-                $conn->close();
-            ?>
+            <button>Add Quote</button>
+            <button> Edit quote </button>
+            <button> Delete quote </button>
             
-
         </div>
-    </section>
+
+    </header>
 
 <!-- =========== Footer =========== --> 
 
@@ -123,5 +87,8 @@ if ($conn->connect_error) {
             <a href="Register.php"><button>Register</button></a>
         </form>
     </section>
+
+
 </body>
 </html>
+

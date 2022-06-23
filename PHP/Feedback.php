@@ -1,5 +1,5 @@
 <?php
-include "..\\config.php";
+include "Config.php";
 
 
 // Check user login or not
@@ -88,15 +88,16 @@ if(isset($_POST['but_logout'])){
             </center>
             </div>
             </header>
+<!-- =========== Footer =========== --> 
 
-            <section class="footer">
+<section class="footer">
         <p>Gamer Times</p>
         <p>© 2022 Gamer Times | Copyright | All right reserved.</p>
         <form method='post' action="">
-        <input type="submit" value="Logout" name="but_logout">
+            <button name="but_logout">Logout</button>
+            <a href="Register.php"><button>Register</button></a>
         </form>
     </section>
-
 </body>
 
 </html>
