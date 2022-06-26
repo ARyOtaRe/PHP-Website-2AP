@@ -13,7 +13,6 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `name`, `password`) VALUES
 (1, "azerty", "John Doe", "12345"),
 (2, "admin", "admin", "admin");
-(3, "jeandosantos", "Jean Dos Santos", "12345");
 
 
   CREATE TABLE `quotes`(
@@ -36,7 +35,7 @@ INSERT INTO `quotes`(`id`,`image`,`quote`,`name`) VALUES
 (10,"../Images/Quotes/Tidus.jpg","No matter how dark the night, the morning always comes.","Tidus - Final Fantasy X"),
 (11,"../Images/Quotes/Kratos.jpg","Don't be sorry, Be Better.","Kratos - God of War"),
 (12,"../Images/Quotes/Martson.jpg","If you find yourself in a hole, the first thing to do is stop digging.","John Martson - Red Dead Redemption"),
-(13,"../Images/Quotes/Andrew.jpg","We all make choices in life, but in the end our choices make us.","Andrew Ryan - Bioshock""),
+(13,"../Images/Quotes/Andrew.jpg","We all make choices in life, but in the end our choices make us.","Andrew Ryan - Bioshock"),
 (14,"../Images/Quotes/Assassin.jpg","Wanting something does not give you the right to have it.","Ezio - Assassin's Creed 2"),
 (15,"../Images/Quotes/Frank.jpg","You can't undo what you've already done, but you can face up to it.","Frank Coleridge - Silent Hill : Downpour");
 
