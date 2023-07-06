@@ -69,10 +69,25 @@ if ($conn->connect_error) {
             <div class="line"></div>
             <h1>Edit quotes</h1>
 
-            <button>Add Quote</button>
-            <button> Edit quote </button>
-            <button> Delete quote </button>
-            
+            <button onclick="addquotes()">Add Quote</button>
+
+            <button onclick="editquotes()"> Edit quote </button>
+
+            <button onclick="delquote()"> Delete quote </button>
+
+
+            <div class="add-quote">
+            <p> eithjflgib</p>
+            </div>
+
+            <div class="edit-quote">
+            <p>tghdkrghenthrg</p>
+            </div>
+
+            <div class="delete-quote">
+            <p>tghhrtjngdrghy</p>
+            </div>
+
         </div>
 
     </header>
